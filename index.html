@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sand Travelers | رحّالة الرمال</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #cce4f6, #d0f0e0);
+      color: #2e3b3b;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #81c3d7;
+      color: #ffffff;
+      text-align: center;
+      padding: 2em;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin: 0.3em 0;
+    }
+    h2 {
+      font-size: 1.8em;
+      color: #2a5d4f;
+    }
+    section {
+      padding: 2em;
+      margin: auto;
+      max-width: 900px;
+    }
+    .arabic {
+      font-family: 'Arial', sans-serif;
+      direction: rtl;
+      text-align: right;
+      font-size: 1.2em;
+      color: #2f4f4f;
+    }
+    .description, .impact, .art-form {
+      background-color: #e7f6f2;
+      border-radius: 10px;
+      padding: 1.5em;
+      margin-top: 1.5em;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+    input[type="file"] {
+      margin-top: 1em;
+    }
+    .download-link {
+      display: inline-block;
+      background-color: #55a89b;
+      color: white;
+      padding: 0.7em 1.2em;
+      margin-top: 1em;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    img, canvas {
+      margin-top: 1em;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 800px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="arabic">رحّالة الرمال</h1>
+    <h1>Sand Travelers</h1>
+  </header>
+
+  <section class="description">
+    <h2 class="arabic">عن الموقع</h2>
+    <p class="arabic">
+      هذا المكان الساحر للأطفال الفضوليين! نكتشف العالم المجهري المخفي في الرمال، والماء، والأوراق باستخدام المجهر، ثم نحوله إلى فن ومرح! انضم إلينا في رحلة الرمال وكن عالِمًا صغيرًا!
+    </p>
+    <h2>About the Website</h2>
+    <p>
+      Welcome to the dreamy world of tiny explorers! Here, kids uncover the microscopic secrets hidden in sand, water, and leaves using a microscope—and turn science into beautiful art and storytelling. Ready to become a sand traveler?
+    </p>
+  </section>
+
+  <section>
+    <h2 class="arabic">شاهد ما لا يُرى</h2>
+    <h2>See the Invisible</h2>
+    <p class="arabic">هنا نعرض صوراً مذهلة للمواد التي فحصناها تحت المجهر—من حبات الرمل إلى قطرات البحر، سترى العالم كما لم تره من قبل!</p>
+    <p>Here we reveal magical images of materials viewed under the microscope—from grains of desert sand to droplets of Gulf seawater. You’ll see a world you never knew existed!</p>
+    <img src="plant.jpg" alt="Microscopic Plant Cell" id="plantImage">
+    <img src="sapphire.jpg" alt="Microscopic Sapphire Structure" id="sapphireImage">
+  </section>
+
+  <section>
+    <h2 class="arabic">ما الذي يعنيه هذا؟</h2>
+    <h2>What It Means</h2>
+    <p class="arabic">كل صورة تخبرنا بقصة—هل رأيت التفاصيل في الورقة؟ هذا يدل على الحياة! وأنماط الياقوت؟ هذا جمال مخفي! دعنا نفسر كل صورة معاً.</p>
+    <p><strong>Plant Cell (ورقة نبات):</strong> This image shows tiny plant cells that store water and help the leaf "breathe." The round green structures you see might be chloroplasts—where the magic of photosynthesis happens! Look closely: you might spot tiny veins that move nutrients, just like highways!</p>
+    <p><strong>Sapphire Structure (هيكل الياقوت):</strong> This crystal shows us a rigid, beautiful pattern made by nature over thousands of years. The shapes and lines you see are actually how atoms arrange themselves in a mineral. Isn’t it amazing how nature creates art even at the tiniest levels?</p>
+  </section>
+
+  <section class="art-form">
+    <h2 class="arabic">فن العالم المجهري</h2>
+    <h2>Art of the Microworld</h2>
+    <p class="arabic">حمّل صورتك المجهرية وحوّلها إلى عمل فني باستخدام الذكاء الاصطناعي. اجعل العلم لوحة فنية!</p>
+    <p>Upload your microscope photo and turn it into art using a fun AI-style filter. Let science paint its own picture!</p>
+
+    <input type="file" accept="image/*" id="uploadInput">
+    <canvas id="artCanvas"></canvas>
+    <p><em>Try uploading an image to see your scientific art!</em></p>
+  </section>
+
+  <section>
+    <h2 class="arabic">استكشف في المنزل</h2>
+    <h2>Explore at Home</h2>
+    <p class="arabic">حمّل أوراق العمل الرائعة الخاصة بنا وابدأ مغامرتك العلمية من المنزل!</p>
+    <p>Download our exciting activity sheet and begin your own microscopic adventure at home!</p>
+    <a class="download-link" href="sandTavelers.pdf" download>Download Sand Travelers Activity Sheet</a>
+  </section>
+
+  <section class="impact">
+    <h2 class="arabic">كن أنت رحّالة الرمال</h2>
+    <h2>Be the Sand Traveler</h2>
+    <p class="arabic">
+      أن تصبح رحّالة الرمال يعني أنك عالم صغير، وفنان مبدع، وصوت للطبيعة! مشروعنا يعلمك عن بيئتنا، يربطك بكويتنا الجميلة، ويجعلك تكتشف المدهش في الأشياء الصغيرة. من المدارس إلى المنازل، هذا المشروع يزرع الفضول، والإبداع، والحب للطبيعة.
+    </p>
+    <p>
+      Being a Sand Traveler means you're a tiny scientist, a creative artist, and a voice for nature! Our project teaches about the environment, connects you with Kuwait’s beauty, and makes you discover wonder in the smallest things. From schools to homes—it plants curiosity, creativity, and care.
+    </p>
+  </section>
+
+  <script>
+    const uploadInput = document.getElementById('uploadInput');
+    const canvas = document.getElementById('artCanvas');
+    const ctx = canvas.getContext('2d');
+
+    uploadInput.addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const img = new Image();
+      const reader = new FileReader();
+
+      reader.onload = function (event) {
+        img.src = event.target.result;
+      };
+
+      img.onload = function () {
+        canvas.width = img.width;
+        canvas.height = img.height;
+        ctx.drawImage(img, 0, 0);
+
+        // Apply dreamy art filter (simple color transformation)
+        let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        let data = imageData.data;
+        for (let i = 0; i < data.length; i += 4) {
+          // Soft dreamy green and blue tones
+          data[i] = data[i] * 0.6;     // red down
+          data[i + 1] = data[i + 1] * 1.3; // green up
+          data[i + 2] = data[i + 2] * 1.4; // blue up
+        }
+        ctx.putImageData(imageData, 0, 0);
+      };
+
+      reader.readAsDataURL(file);
+    });
+  </script>
+</body>
+</html>
