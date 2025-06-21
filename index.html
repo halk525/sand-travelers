@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sand Travelers | رحّالة الرمال</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #e7f5e9, #dfebe2, #f0e6d6);
+      color: #3b3b2e;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #a49d8e;
+      color: #2f402f;
+      text-align: center;
+      padding: 2em;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin: 0.3em 0;
+    }
+    h2 {
+      font-size: 1.8em;
+      color: #2e4932;
+    }
+    section {
+      padding: 2em;
+      margin: auto;
+      max-width: 900px;
+    }
+    .arabic {
+      font-family: 'Arial', sans-serif;
+      direction: rtl;
+      text-align: right;
+      font-size: 1.2em;
+      color: #2d3e2d;
+    }
+    .top-arabic {
+      text-align: center;
+    }
+    .description, .impact, .art-form {
+      background-color: #f8f4ee;
+      border-radius: 10px;
+      padding: 1.5em;
+      margin-top: 1.5em;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+    input[type="file"], select {
+      margin-top: 1em;
+      display: block;
+    }
+    .download-link {
+      display: inline-block;
+      background-color: #8eb6a2;
+      color: white;
+      padding: 0.7em 1.2em;
+      margin: 0.5em 0;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    img.preview {
+      margin-top: 1em;
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    canvas {
+      display: block;
+      margin-top: 1em;
+      max-width: 100%;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="arabic top-arabic">رحّالة الرمال</h1>
+    <h1>Sand Travelers</h1>
+  </header>
+
+  <section class="description">
+    <h2 class="arabic">عن الموقع</h2>
+    <p class="arabic">
+      هذا المكان الساحر للأطفال الفضوليين! نكتشف العالم المجهري المخفي في الرمال، والماء، والأوراق باستخدام المجهر، ثم نحوله إلى فن ومرح! انضم إلينا في رحلة الرمال وكن عالِمًا صغيرًا!
+    </p>
+    <h2>About the Website</h2>
+    <p>
+      Welcome to the dreamy world of tiny explorers! Here, kids uncover the microscopic secrets hidden in sand, water, and leaves using a microscope—and turn science into beautiful art and storytelling. Ready to become a sand traveler?
+    </p>
+  </section>
+
+  <section>
+    <h2 class="arabic">شاهد ما لا يُرى</h2>
+    <h2>See the Invisible</h2>
+    <p class="arabic">هنا نعرض صوراً مذهلة للمواد التي فحصناها تحت المجهر—من حبات الرمل إلى قطرات البحر، سترى العالم كما لم تره من قبل!</p>
+    <p>Here we reveal magical images of materials viewed under the microscope—from grains of desert sand to droplets of Gulf seawater. You’ll see a world you never knew existed!</p>
+    <img src="plant.jpg" alt="Microscopic Plant Cell" width="100%">
+    <img src="sapphire.jpg" alt="Microscopic Sapphire Structure" width="100%">
+    <img src="sand.jpg" alt="Microscopic Sand Sample" width="100%">
+  </section>
+
+  <section>
+    <h2 class="arabic">ما الذي يعنيه هذا؟</h2>
+    <h2>What It Means</h2>
+    <p class="arabic">كل صورة تخبرنا بقصة—هل رأيت التفاصيل في الورقة؟ هذا يدل على الحياة! وأنماط الياقوت؟ هذا جمال مخفي! وحبوب الرمل؟ هي صفحات من قصة البيئة! دعنا نفسر كل صورة معاً.</p>
+    <p>Every image tells a story—do you see the patterns in the plant? That’s life at work! And the textures of sapphire? That’s hidden beauty! What about the sand grains? They are pages from nature’s book! Let’s interpret what each one means together.</p>
+  </section>
+
+  <section class="art-form">
+    <h2 class="arabic">فن العالم المجهري</h2>
+    <h2>Art of the Microworld</h2>
+    <p class="arabic">حمّل صورتك المجهرية وحوّلها إلى عمل فني باستخدام الذكاء الاصطناعي. اجعل العلم لوحة فنية!</p>
+    <p>Upload your microscope photo and turn it into art using fun creative filters!</p>
+    <input type="file" id="imageInput" accept="image/*">
+    <label for="filter">Choose a filter:</label>
+    <select id="filter">
+      <option value="grayscale">Grayscale</option>
+      <option value="invert">Invert Colors</option>
+      <option value="pixelate">Pixel Art</option>
+    </select>
+    <canvas id="canvas"></canvas>
+  </section>
+
+  <section>
+    <h2 class="arabic">استكشف في المنزل</h2>
+    <h2>Explore at Home</h2>
+    <p class="arabic">حمّل أوراق العمل الرائعة الخاصة بنا وابدأ مغامرتك العلمية من المنزل!</p>
+    <p>Download our exciting activity sheets and begin your own microscopic adventure at home!</p>
+    <a class="download-link" href="sandTavelers.pdf" download>Sand Travelers kit guide</a><br>
+    <a class="download-link" href="isThisAGemOf (1).pdf" download>Is This a Gem?</a><br>
+    <a class="download-link" href="Explant.pdf" download>Check the Plant</a><br>
+    <a class="download-link" href="Checksand (1).pdf" download>Check the Sand</a>
+  </section>
+
+  <section class="impact">
+    <h2 class="arabic">كن أنت رحّالة الرمال</h2>
+    <h2>Be the Sand Traveler</h2>
+    <p class="arabic">
+      أن تصبح رحّالة الرمال يعني أنك عالم صغير، وفنان مبدع، وصوت للطبيعة! مشروعنا يعلمك عن بيئتنا، يربطك بكويتنا الجميلة، ويجعلك تكتشف المدهش في الأشياء الصغيرة. من المدارس إلى المنازل، هذا المشروع يزرع الفضول، والإبداع، والحب للطبيعة.
+    </p>
+    <p>
+      Being a Sand Traveler means you're a tiny scientist, a creative artist, and a voice for nature! Our project teaches about the environment, connects you with Kuwait’s beauty, and makes you discover wonder in the smallest things. From schools to homes—it plants curiosity, creativity, and care.
+    </p>
+  </section>
+
+  <script>
+    const input = document.getElementById('imageInput');
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const filterSelect = document.getElementById('filter');
+
+    input.addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const img = new Image();
+        img.onload = function() {
+          canvas.width = img.width;
+          canvas.height = img.height;
+          ctx.drawImage(img, 0, 0);
+
+          applyFilter(filterSelect.value);
+        };
+        img.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+
+    filterSelect.addEventListener('change', () => {
+      if (canvas.width && canvas.height) {
+        applyFilter(filterSelect.value);
+      }
+    });
+
+    function applyFilter(type) {
+      const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      const data = imageData.data;
+
+      if (type === 'grayscale') {
+        for (let i = 0; i < data.length; i += 4) {
+          let avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+          data[i] = data[i + 1] = data[i + 2] = avg;
+        }
+      } else if (type === 'invert') {
+        for (let i = 0; i < data.length; i += 4) {
+          data[i] = 255 - data[i];       // Red
+          data[i + 1] = 255 - data[i + 1]; // Green
+          data[i + 2] = 255 - data[i + 2]; // Blue
+        }
+      } else if (type === 'pixelate') {
+        const size = 10;
+        for (let y = 0; y < canvas.height; y += size) {
+          for (let x = 0; x < canvas.width; x += size) {
+            let red = 0, green = 0, blue = 0, count = 0;
+            for (let dy = 0; dy < size; dy++) {
+              for (let dx = 0; dx < size; dx++) {
+                let px = (x + dx + (y + dy) * canvas.width) * 4;
+                if (px < data.length) {
+                  red += data[px];
+                  green += data[px + 1];
+                  blue += data[px + 2];
+                  count++;
+                }
+              }
+            }
+            red = red / count;
+            green = green / count;
+            blue = blue / count;
+            for (let dy = 0; dy < size; dy++) {
+              for (let dx = 0; dx < size; dx++) {
+                let px = (x + dx + (y + dy) * canvas.width) * 4;
+                if (px < data.length) {
+                  data[px] = red;
+                  data[px + 1] = green;
+                  data[px + 2] = blue;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      ctx.putImageData(imageData, 0, 0);
+    }
+  </script>
+</body>
+</html>
